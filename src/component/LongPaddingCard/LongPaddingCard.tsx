@@ -72,7 +72,7 @@ export default function LongPaddingCard({
                   <LoadImage
                     src={preview_project_preview.original}
                     alt={preview_project_title}
-                    className={styles['long-padding-card__mainImage']}
+                    className={`${styles['long-padding-card__mainImage']} card-image`}
                   />
                 }
                 </div>

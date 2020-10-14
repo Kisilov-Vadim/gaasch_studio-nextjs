@@ -73,7 +73,7 @@ export default function LongCard({cardData, logo, star}: TProps): ReactElement {
                     <LoadImage
                       src={preview_project_preview.original}
                       alt={preview_project_title}
-                      className={styles['long-card__mainImage']}
+                      className={`${styles['long-card__mainImage']} card-image`}
                     />
                   }
                 </div>

@@ -76,7 +76,7 @@ export default function ShortCard({
                       <LoadImage
                         src={preview_project_preview.original}
                         alt={preview_project_title}
-                        className={`${styles['short-card__mainImage']} short-card__mainImage`}
+                        className={`${styles['short-card__mainImage']} short-card__mainImage card-image`}
                       />
                     }
                   </div>
