@@ -1,0 +1,73 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  &__main {
+    position: relative;
+    width: 100px;
+    height: 100px;
+
+    @media screen and (max-width: 576px) {
+      position: relative;
+      top: -50px;
+    }
+
+    &-star {
+      position: absolute;
+      right: 0;
+      top: 24px;
+
+      & > svg {
+        animation: rotate 1s ease-out infinite;
+        -webkit-animation: rotate 1s ease-out infinite;
+      }
+      
+      & svg g {
+        animation: colorChange 1s ease-out infinite;
+        -webkit-animation: colorChange 1s ease-out infinite;
+      }
+    }
+
+    &-g {
+      width: 100%;
+      height: 100%;
+
+      & > svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+
+@keyframes rotate {
+  0% {
+    fill: blue;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    fill: red;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+
+@keyframes colorChange {
+  0% { fill: #1771F1; }
+  25% { fill: orange; }
+  50% { fill: #17F1D7; }
+  75% { fill: #FF756B; }
+  100% { fill: red; }
+}
+

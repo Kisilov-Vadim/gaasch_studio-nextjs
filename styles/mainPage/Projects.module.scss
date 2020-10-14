@@ -1,0 +1,19 @@
+.projects {
+  padding: 150px 0 160px;
+  overflow: hidden;
+
+  @media screen and (max-width: 1200px) {
+    padding: 150px 30px 160px;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 0 0 0 30px;
+  }
+
+  .sectionTitle {
+
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+}

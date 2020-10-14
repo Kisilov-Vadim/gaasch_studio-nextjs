@@ -1,0 +1,61 @@
+.short-card {
+  position: relative;
+  width: calc(50% - 10px);
+  margin-bottom: 347px;
+  height: max-content;
+  padding-right: 16.6%; 
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 100px;
+    padding-right: 0; 
+  }
+
+  .image-mask {
+    overflow: hidden;
+  }
+
+  &__mainImage {
+    box-sizing: border-box;
+    height: 616px;
+    width: 100%;
+    transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      height: 471px;
+      padding-right: 0;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__star {
+    position: absolute;
+    top: 0;
+    right: 34.5%;
+    width: 20px; 
+    height: 19px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  h3 {
+    cursor: pointer;
+    transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+  }
+}

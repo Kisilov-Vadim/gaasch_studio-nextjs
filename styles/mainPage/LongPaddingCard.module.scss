@@ -1,0 +1,67 @@
+.long-padding-card {
+  position: relative;
+  width: calc(50% - 10px);
+  height: max-content;
+  margin-bottom: 264px;
+  padding-top: 241px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 100px;
+    padding-top: 0;
+  }
+
+  .image-mask {
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: 768px) {
+  
+    & a:hover .long-padding-card__mainImage {
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+    }
+
+    &:hover h3 {
+      opacity: 0.5;
+    }
+  }
+  
+  &__mainImage {
+    height: 940px;
+    width: 100%;
+    object-fit: cover;
+    transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+
+    @media screen and (max-width: 768px) {
+      height: 471px;
+    }
+  } 
+
+  &__star {
+    position: absolute;
+    top: 5%;
+    right: 70%;
+    width: 20px; 
+    height: 19px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  h3 {
+    transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+  }
+}

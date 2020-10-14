@@ -1,0 +1,16 @@
+.other-projects {
+  padding-top: 150px;
+  overflow: hidden;
+
+  @media screen and (max-width: 1200px)  {
+    padding-left: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-top: 60px;
+  }
+}

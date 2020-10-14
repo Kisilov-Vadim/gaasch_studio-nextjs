@@ -1,0 +1,23 @@
+.cardsGroup {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+  }
+
+  & > a:last-child, 
+  & > a:nth-last-child(2),
+  & > div:last-child, 
+  & > div:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
+  & > a {
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

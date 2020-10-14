@@ -1,0 +1,27 @@
+.projectGallery {
+  padding: 200px 0 0 0;
+
+  img {
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding: 200px 20px 0;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 60px 20px;
+  }
+
+  .lazy-load-image-background.opacity.lazy-load-image-loaded {
+    margin: 10px;
+
+    @media screen and (max-width: 576px) {
+      margin: 5px;
+    }
+  }
+
+  &__imagecontainer {
+    margin: 10px;
+  }
+}

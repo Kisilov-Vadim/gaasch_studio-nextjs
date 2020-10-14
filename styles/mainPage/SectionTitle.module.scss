@@ -1,0 +1,14 @@
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin-bottom: 100px;
+
+  @media screen and (max-width: 576px) {
+    margin-bottom: 30px;
+  }
+
+  p {
+    margin-left: 11px;
+  }
+}

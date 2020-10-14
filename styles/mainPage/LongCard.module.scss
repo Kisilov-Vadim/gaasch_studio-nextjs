@@ -1,0 +1,78 @@
+.long-card {
+  position: relative;
+  width: calc(50% - 10px);
+  height: max-content;
+  margin-bottom: 300px;
+  animation-timing-function: linear;
+  
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
+  .image-mask {
+    overflow: hidden;
+  } 
+
+  @media screen and (min-width: 768px) {
+    &:hover .long-card__mainImage {
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+    }
+
+    &:hover h3 {
+      opacity: 0.5;
+    }
+  }
+
+  &__mainImage {
+    height: 940px;
+    width: 100%;
+    object-fit: cover;
+    transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+
+    @media screen and (max-width: 768px) {
+      height: 471px;
+    }
+  } 
+
+  &__star {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px; 
+    height: 19px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 102%;
+
+    @media screen and (max-width: 1200px) {
+      left: -30px!important;
+    }
+
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  h3 {
+    transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+  }
+}

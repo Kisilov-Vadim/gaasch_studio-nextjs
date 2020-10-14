@@ -1,0 +1,22 @@
+.project-facts {
+  display: flex;
+  align-items: flex-start;
+  padding-right: 100px; 
+  margin-top: 150px;
+
+  @media screen and (max-width: 1200px) {
+    padding: 0 30px; 
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  .sectionTitle {
+    margin-top: 3px;
+  }
+
+  &__info {
+    margin-left: 12%;
+  }
+}
