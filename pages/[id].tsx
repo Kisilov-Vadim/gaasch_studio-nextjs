@@ -44,7 +44,7 @@ export default function ({ dataPage, dataMain }): ReactElement {
     }
   }
 
-  if (!projectPageData || !mainPageData) {
+  if (!mainPageData || !projectPageData) {
     return <Loader />
   } else {
     return (
@@ -81,29 +81,8 @@ export default function ({ dataPage, dataMain }): ReactElement {
   }
 }
 
-
-export async function getStaticPaths() {
-  const res = await fetch('http://gaasch-studio.lu/sunflower/api/studio', {
-    method: 'POST', 
-    headers: {
-      "Content-Type": "application/json", 
-      "Accept": "application/json"
-    }
-  })
-  const dataLoad = await res.json(); 
-  const paths = [...dataLoad.preview_projects].map((projects) => {
-    return {
-      params: {
-        id: projects.projects_alias
-      }
-    }
-  });
-
-  return { paths, fallback: true }
-}
-
-export async function getStaticProps({ params }) {
-  const res = await fetch(`http://gaasch-studio.lu/sunflower/api/project/${params.id}`, {
+export async function getServerSideProps({ query: {id}, req }) {
+  const res = await fetch(`http://gaasch-studio.lu/sunflower/api/project/${id}`, {
     method: 'POST', 
     headers: {
       "Content-Type": "application/json", 

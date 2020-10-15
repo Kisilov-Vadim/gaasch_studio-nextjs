@@ -53,7 +53,7 @@ export default function ({ dataLoad }): ReactElement {
   }
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch('http://gaasch-studio.lu/sunflower/api/studio', {
     method: 'POST', 
     headers: {
